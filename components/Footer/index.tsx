@@ -235,8 +235,8 @@ const Footer = () => {
               viewport={{ once: true }}
               className="animate_top"
             >
-              <SocialIcon url="www.instagram.com" bgColor="#e5e7eb" fgColor="black" href="" />{" "}
-              <SocialIcon url="www.tiktok.com" bgColor="#e5e7eb" fgColor="black" href="" />
+              <SocialIcon url="www.instagram.com" bgColor="#e5e7eb" fgColor="black" href="https://www.instagram.com/thealphagroup.ae/" />{" "}
+              <SocialIcon url="www.tiktok.com" bgColor="#e5e7eb" fgColor="black" href="https://www.tiktok.com/@alphagroup.ae?_t=8j6yZJhQWUS&_r=1" />
             </motion.div>
 
           </div>
