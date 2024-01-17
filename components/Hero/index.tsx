@@ -15,12 +15,12 @@ const Hero = () => {
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
           <div className="flex lg:items-center lg:gap-8 xl:gap-32.5">
             <div className=" md:w-1/2">
-              <h1 className="mb-5 pr-16 text-3xl font-bold text-black dark:text-white xl:text-hero ">
-                Welcome to Alpha Group {"   "}
+              <h1 className="mb-5 pr-16 text-3xl font-bold text-[#443e3e] dark:text-white xl:text-hero ">
+                We Are Alpha Group {"   "}
               </h1>
               <p>
-                Discover unparalleled transportation and maintenance services at Alpha Group,
-                your trusted partner in <strong>Abu Dhabi, UAE</strong>. With a trio of subsidiaries, we seamlessly integrate precision,
+                Your Source for <strong className="text-[#9e0d0d]">Precision Transportation</strong>, <strong className="text-[#2f8799]">Cutting-edge Electronics</strong>, and <strong className="text-[#0d3b9e]">Robust Heavy Machine Maintenance</strong> services in <strong>Abu Dhabi, UAE</strong>.
+                .With a trio of subsidiaries, we seamlessly integrate precision,
                 reliability, and innovation into every aspect of our operations.
               </p>
 
