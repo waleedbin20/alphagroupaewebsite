@@ -4,9 +4,11 @@ import Image from "next/image";
 import React from "react";
 import { useState } from 'react';
 import Banner from "./banner";
+import LoadingSpinner from "./loading";
 
 const Contact = () => {
   const [success, setSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [hasMounted, setHasMounted] = React.useState(false);
   const [formState, setFormState] = useState({
@@ -28,7 +30,7 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    setLoading(true);
     if (
       !formState.fullName ||
       !formState.email ||
@@ -36,6 +38,7 @@ const Contact = () => {
       !formState.contactPhoneNumber ||
       !formState.message
     ) {
+      setLoading(false);
       setError('Please fill in all fields.');
       setTimeout(() => {
         setError('');
@@ -45,6 +48,7 @@ const Contact = () => {
       return;
     }
     try {
+
       const formData = new FormData();
 
       Object.entries(formState).forEach(([key, value]) => {
@@ -60,8 +64,8 @@ const Contact = () => {
       });
 
       if (response.ok) {
+        setLoading(false);
         setSuccess(true);
-
         setFormState({
           fullName: '',
           email: '',
@@ -207,6 +211,7 @@ const Contact = () => {
                 </div>
               </form>
               <br />
+              {loading && <LoadingSpinner />}
               {error && <Banner message={error} message1="" />}
               {success && <Banner message="Your Message Has Been Sent Successfully" message1=" Our team will get back to your shortly." />}
             </motion.div>
